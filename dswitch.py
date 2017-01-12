@@ -35,7 +35,7 @@ if __name__ == "__main__":
         for line in config:
             line = line.strip().split('#', 1)[0].strip()
             if line is not "":
-                info = line.split(' ')
+                info = line.split()
                 if (len(info) == 2) and os.path.isdir(os.path.expanduser(info[1])):
                     # create the menu!
                     menu_item = Gtk.MenuItem(info[0])
